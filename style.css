@@ -1,0 +1,542 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: #08070b;
+  color: #ffffff;
+  padding: 20px;
+  padding-bottom: 100px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.logo-title {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.profile-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 14px;
+  border: 2px solid #a855f7;
+  object-fit: cover;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 25px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: #d1d5db;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+/* VIP Access Card */
+.vip-card {
+  background: linear-gradient(135deg, #18113c 0%, #0d0a21 100%);
+  border: 1px solid #3b2a82;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(88, 28, 135, 0.3);
+}
+
+.vip-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.vip-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.badge {
+  font-size: 10px;
+  color: #a855f7;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.vip-info h3 {
+  font-size: 16px;
+  margin: 2px 0;
+}
+
+.vip-info p {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.vip-info .price {
+  font-size: 10px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.buy-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* App Cards (Featured) */
+.app-card {
+  background-color: #12101a;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.border-pink {
+  border: 1px solid #e879f9;
+  box-shadow: 0 0 10px rgba(232, 121, 249, 0.15);
+}
+
+.app-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.app-details {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.app-details h3 {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.green-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.sub-title {
+  font-size: 10px;
+  color: #c084fc;
+  font-weight: bold;
+  display: block;
+  margin-top: 2px;
+}
+
+.verified, .store-text {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.get-btn {
+  background-color: #1e1b2e;
+  color: #c084fc;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #08070b;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 10px 25px;
+  border-top: 1px solid #1f1b2e;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: bold;
+  gap: 4px;
+}
+
+.active-nav {
+  color: #ffffff;
+}
+
+.active-nav .nav-icon {
+  background-color: rgba(192, 132, 252, 0.15);
+  padding: 8px 18px;
+  border-radius: 18px;
+  color: #c084fc;
+}
+
+/* شاشا تاریک یا پشت بۆکسێ */
+.custom-modal {
+  display: none; /* ل دەستپێکێ نەدیارە */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 99999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ناوەڕۆکا بۆکسێ دیزاینکری */
+.custom-modal-content {
+  background-color: #12101a;
+  border: 1px solid #a855f7; /* هێڵا مۆر */
+  border-radius: 20px;
+  padding: 25px 20px;
+  width: 85%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
+}
+
+/* وێنەیێ ناڤ بۆکسێ */
+.modal-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 1px solid #3b2a82;
+}
+
+.custom-modal-content h3 {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.custom-modal-content p {
+  color: #9ca3af;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+/* دوکما OK */
+.modal-ok-btn {
+  background-color: #a855f7;
+  color: #ffffff;
+  border: none;
+  padding: 8px 30px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* کەمکرنا پادینگا گشتی دا تەواو بچێتە سەرێ */
+.sarmad-page-container {
+  padding: 0 15px 20px 15px;
+  color: white;
+}
+
+/* جێگیرکرنا بەشێ سەرێ (Sticky Top Header) */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #0b0914; /* هەمان ڕەنگێ باکگراوندا سەرەکی دا ڕوون دیار ببیت */
+  padding-top: 15px;
+  z-index: 1000; /* دکەڤیتە سەر هەمی کارتێن دی */
+}
+
+/* ڕێکخستنا دوکمێ و نڤێسینێ ل کێلەک ئێک یان سەر ئێک */
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* دیزاینا دوکما Back */
+.back-btn {
+  background-color: #1e1b2e;
+  color: #a855f7;
+  padding: 6px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  width: max-content;
+}
+
+/* نڤێسینا سەرەکی */
+.sticky-header h2 {
+  color: #ffffff;
+  font-size: 18px;
+  margin: 0;
+  text-align: right;
+  width: 100%;
+}
+
+/* خەتا مۆر یێ جوداکەر ل ژێر بەشێ سەرێ */
+.header-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #a855f7, transparent);
+  margin-top: 12px;
+  margin-bottom: 15px;
+}
+
+/* دیزاینا کارتا باریک و مۆر (Sarmad Page Card) */
+.sarmad-details .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  direction: ltr; /* ڕێزبەندی لە چەپەوە بۆ ڕاست */
+  
+  /* دیزاینا لاکێشەیی و باریک */
+  background-color: #12101a;
+  border: 1.5px solid #a855f7; /* چوارچێوەیا مۆر */
+  border-radius: 16px;       /* لاڕووت کردنی لێوارەکان */
+  padding: 14px 18px;         /* کەمکردنەوەیا پانی و بەرزی دا باریک بیت */
+  margin-bottom: 12px;
+  
+  /* کاریگەرییا درەوشانەوەیا مۆر (Glow Effect) */
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+}
+
+/* بچووککردنەوەی ئایکۆنەکە دا لەگەڵ کارتە باریکەکە بگونجێت */
+.sarmad-details .card-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* ڕێکخستنی ناڤ و دەقەکان */
+.sarmad-details .card-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+
+.sarmad-details .card-info h3 {
+  font-size: 14px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.sarmad-details .card-subtitle {
+  font-size: 10px;
+  color: #a855f7;
+  margin: 1px 0;
+}
+
+.sarmad-details .card-info p {
+  font-size: 10px;
+  margin: 0;
+}
+
+.section-title-text {
+  color: #a855f7;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+/* Styling for Settings Page Items */
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.setting-item {
+  background-color: #12101a;
+  border: 1.5px solid #a855f7;
+  border-radius: 14px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  direction: ltr;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.15);
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.item-icon {
+  font-size: 18px;
+}
+
+/* Developer Info Box */
+.developer-box {
+  background-color: #12101a;
+  border: 1.5px solid #a855f7;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.2);
+  direction: ltr;
+  text-align: left;
+}
+
+.developer-box h3 {
+  margin: 0;
+  font-size: 12px;
+  color: #a855f7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dev-name {
+  margin: 4px 0 8px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.dev-desc {
+  margin: 0;
+  font-size: 12px;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+/* مینیۆیا ژێرێ */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #12101a;
+  border-top: 1.5px solid #a855f7;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 9999;
+}
+
+/* دوکمێن ئاسایی (نەچالاک): هەردەم ل ناڤەڕاستێ و ستوونی نە */
+.nav-item {
+  display: flex;
+  flex-direction: column; /* هەردەم ئایکۆن ل سەر و نڤێسین ل بنە */
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  gap: 3px;
+  transition: transform 0.2s ease, color 0.2s ease; /* بۆ دروستکرنا جوولەیا نەرم */
+}
+
+.nav-item span:first-child {
+  font-size: 16px;
+}
+
+/* دوکما چالاک (Active): ل ناڤەڕاستێ دەمێنێت، بەلێ ڕەنگ مۆر دبیت و کەمەکێ مەزنتر (Zoom In) دبیت */
+.nav-item.active {
+  color: #a855f7; /* ڕەنگێ مۆر */
+  transform: scale(1.15); /* کەمەکێ مەزنتر دکەت ب بێ ئەوەی بچیتە ڕەخان */
+}
+
+.nav-item.active span {
+  color: #a855f7;
+}
+
+/* Search Box Styles */
+.search-box {
+  position: relative;
+  width: 100%;
+  margin: 15px 0 20px 0;
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 16px 12px 42px; /* مەسافا ئایکۆنێ سێرچێ */
+  background-color: #12101a;
+  border: 1.5px solid #a855f7;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.15);
+  transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+  border-color: #c084fc;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.35);
+}
+
+.search-box input::placeholder {
+  color: #6b7280;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+/* ئەڤ کۆدە هەمی وێنێن ناڤ کارتان کۆنترۆڵ دکەت */
+.card img, 
+.file-card img, 
+.app-card img {
+  width: 48px !important;
+  height: 48px !important;
+  max-width: 48px !important;
+  max-height: 48px !important;
+  border-radius: 12px !important;
+  object-fit: cover !important;
+  flex-shrink: 0 !important;
+}

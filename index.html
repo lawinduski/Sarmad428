@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>428</h1>
+    <img src="images/icon1.jpg" alt="Profile" class="profile-img">
+  </header>
+
+  <!-- Premium Access Section -->
+  <section class="section">
+    <h2 class="section-title">SAMRAD</h2>
+    
+    <div class="vip-card">
+      <div class="vip-content">
+        <img src="images/cert-icon.png" alt="Certificate" class="vip-icon">
+        <div class="vip-info">
+          <span class="badge">NO REVOKES</span>
+          <h3>ESign & KSign</h3>
+          <p>ESign & KSign (1 Year)</p>
+          <p class="price">will be soon</p>
+        </div>
+      </div>
+      <a href="https://t.me/sarmad428" target="_blank">
+        <button class="buy-btn">BUY</button>
+        </a>
+    </div>
+  </section>
+
+  <!-- Featured Section -->
+  <section class="section">
+    <h2 class="section-title">FEATURED</h2>
+
+    <div class="app-card border-pink">
+      <img src="images/esign-icon.png" alt="ESign" class="app-icon">
+      <div class="app-details">
+        <h3>ESign</h3>
+        <span class="sub-title">SIGNER TOOL</span>
+        <p class="verified">Verified</p>
+      </div>
+      <!-- دوکما GET -->
+       <button class="get-btn" onclick="openModal()">GET</button>
+
+<!-- بۆکسێ دیزاینکری ب وێنە (Modal Popup) -->
+<div id="myModal" class="custom-modal">
+  <div class="custom-modal-content">
+    
+    <h3>⏳ !نێزیکە دێ بەردەست بیت</h3>
+    <p>will be soon</p>
+    
+    <button class="modal-ok-btn" onclick="closeModal()">OK</button>
+  </div>
+</div>
+
+<script>
+  function openModal() {
+    document.getElementById("myModal").style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+</script>
+    </div>
+
+    <div class="app-card border-pink">
+      <img src="images/icon1.jpg" alt="Sarmad" class="app-icon">
+      <div class="app-details">
+        <h3>Sarmad428 <span class="green-dot"></span></h3>
+        <span class="sub-title">OFFICIAL APP</span>
+        <p class="store-text">Store</p>
+      </div>
+      <!-- بەشەکانی تری لاپەڕەکە و کارتەکانت لێرەن -->
+       <div class="card">
+        <!-- لێرە تەنها دوگمەی GET بەجێبهێڵە -->
+         <a href="sarmad.html">
+          <button class="get-btn" onclick="openSarmadPage()">GET</button>
+        </a>
+      </div>
+      <!-- Bottom Navigation -->
+       <div class="bottom-nav">
+  <a href="index.html" class="nav-item active">
+    <span>🏠</span>
+    <span>Home</span>
+  </a>
+  <a href="apps.html" class="nav-item">
+    <span>📱</span>
+    <span>Apps</span>
+  </a>
+  <a href="files.html" class="nav-item">
+    <span>📁</span>
+    <span>Files</span>
+  </a>
+  <a href="settings.html" class="nav-item">
+    <span>⚙️</span>
+    <span>Setting</span>
+  </a>
+</div>
+      </a>
+    </nav>
+  </body>
+  </html>
+      

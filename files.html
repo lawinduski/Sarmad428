@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Files</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sarmad-page-container">
+    <h2>FILES</h2>
+    <div class="header-line"></div>
+
+    <!-- ⬇️ بوکسا سێرچێ (Search Box) ⬇️ -->
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="fileSearchInput" onkeyup="searchFiles()" placeholder="Search files & certs...">
+    </div>
+
+    <p class="section-title-text">Certificates & Files</p>
+
+    <!-- ⬇️ لستایا ٦ بوکسێن فایلان دگەل لوگۆیان ⬇️ -->
+    <div class="sarmad-details" id="filesList">
+      
+      <!-- بوکسا 1 -->
+      <div class="card file-card">
+        <div class="card-info">
+          <img src="images/cert-logo.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">VideoStar</h3>
+            <p class="card-subtitle">411.9 MB</p>
+          </div>
+        </div>
+        <a href="https://t.me/Sarmad428/1765" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <!-- بوکسا 2 -->
+      <div class="card file-card">
+        <div class="card-info">
+          <img src="images/esign2-logo.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">TikTok</h3>
+            <p class="card-subtitle">243.0 MB</p>
+          </div>
+        </div>
+        <a href="#" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <!-- بوکسا 3 -->
+      <div class="card file-card">
+        <div class="card-info">
+          <img src="images/scarlet-logo.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">YouTube</h3>
+            <p class="card-subtitle">117.9 MB</p>
+          </div>
+        </div>
+        <a href="https://t.me/Sarmad428chat/119886" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <!-- بوکسا 4 -->
+      <div class="card file-card">
+        <div class="card-info">
+          <img src="images/dns-logo.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">Instagram</h3>
+            <p class="card-subtitle">147.3 MB</p>
+          </div>
+        </div>
+        <a href="#" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <!-- بوکسا 5 -->
+      <div class="card file-card">
+        <div class="card-info">
+          <img src="images/gbox-logo.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">PicsArt</h3>
+            <p class="card-subtitle">110.1</p>
+          </div>
+        </div>
+        <a href="#" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <!-- بوکسا 6 -->
+      <div class="card file-card">
+        <div class="card-info">
+          <img src="images/troll-logo.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">8 Ball Pool</h3>
+            <p class="card-subtitle">100.0 MB</p>
+          </div>
+        </div>
+        <a href="" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <div class="card file-card">
+        <div class="card-info">
+            <img src="images/GTA-logo.png" alt="Logo" class="card_img">
+            <div>
+                <h3 class="file-name">GTA San Andreas</h3>
+                <p class="card-subtitle">1.89 GB</p>
+            </div>
+        </div>
+        <a href="https://t.me/Sarmad428chat/111425?single" target="_blanck">
+            <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ⬇️ مینیۆیا ژێرێ (Bottom Navigation - Files ئاکتیڤە) ⬇️ -->
+  <div class="bottom-nav">
+    <a href="index.html" class="nav-item">
+      <span>🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="apps.html" class="nav-item">
+      <span>📱</span>
+      <span>Apps</span>
+    </a>
+    <a href="files.html" class="nav-item active">
+      <span>📁</span>
+      <span>Files</span>
+    </a>
+    <a href="settings.html" class="nav-item">
+      <span>⚙️</span>
+      <span>Setting</span>
+    </a>
+  </div>
+
+  <!-- ⬇️ سکریپتا سێرچکرنێ (JavaScript) ⬇️ -->
+  <script>
+    function searchFiles() {
+      let input = document.getElementById('fileSearchInput').value.toLowerCase();
+      let cards = document.getElementsByClassName('file-card');
+
+      for (let i = 0; i < cards.length; i++) {
+        let fileName = cards[i].querySelector('.file-name').innerText.toLowerCase();
+        if (fileName.includes(input)) {
+          cards[i].style.display = "flex";
+        } else {
+          cards[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

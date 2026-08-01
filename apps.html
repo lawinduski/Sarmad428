@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apps</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sarmad-page-container">
+    <h2>APPS</h2>
+    <div class="header-line"></div>
+
+    <!-- ⬇️ سێرچ بار (Search Box) ⬇️ -->
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" onkeyup="searchApps()" placeholder="Search apps...">
+    </div>
+
+    <p class="section-title-text">All Applications</p>
+
+    <!-- لستایا ئەپان -->
+    <div class="sarmad-details" id="appsList">
+      
+      <!-- ئەپا 1 -->
+      <div class="card app-card">
+        <div class="card-info">
+          <img src="images/app-icon.png" alt="App Icon" class="card-img">
+          <div>
+            <h3 class="app-name">PUBG Mobile <span class="green-dot">●</span></h3>
+            <p class="card-subtitle">Official Release</p>
+            <p class="store-text">Store</p>
+          </div>
+        </div>
+        <a href="#" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <!-- ئەپا 2 -->
+      <div class="card app-card">
+        <div class="card-info">
+          <img src="images/GTA-logo.png" alt="App Icon" class="card-img">
+          <div>
+            <h3 class="app-name">GTA San Andreas <span class="green-dot">●</span></h3>
+            <p class="card-subtitle">Official Release</p>
+            <p class="store-text">Store</p>
+          </div>
+        </div>
+        <a href="#" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- مینیۆیا ژێرێ -->
+  <div class="bottom-nav">
+    <a href="index.html" class="nav-item">
+      <span>🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="apps.html" class="nav-item active">
+      <span>📱</span>
+      <span>Apps</span>
+    </a>
+    <a href="files.html" class="nav-item">
+      <span>📁</span>
+      <span>Files</span>
+    </a>
+    <a href="settings.html" class="nav-item">
+      <span>⚙️</span>
+      <span>Setting</span>
+    </a>
+  </div>
+
+  <!-- ⬇️ سکریپتا سێرچێ (JavaScript) ⬇️ -->
+  <script>
+    function searchApps() {
+      let input = document.getElementById('searchInput').value.toLowerCase();
+      let cards = document.getElementsByClassName('app-card');
+
+      for (let i = 0; i < cards.length; i++) {
+        let appName = cards[i].querySelector('.app-name').innerText.toLowerCase();
+        if (appName.includes(input)) {
+          cards[i].style.display = "flex";
+        } else {
+          cards[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
