@@ -276,9 +276,9 @@ body {
 /* جێگیرکرنا بەشێ سەرێ (Sticky Top Header) */
 .sticky-header {
   position: sticky;
-  top: 15;
+  top: 1;
   background-color: #0b0914; /* هەمان ڕەنگێ باکگراوندا سەرەکی دا ڕوون دیار ببیت */
-  padding-top: 15px;
+  padding-top: 18px;
   z-index: 1000; /* دکەڤیتە سەر هەمی کارتێن دی */
 }
 
