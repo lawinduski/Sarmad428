@@ -278,7 +278,7 @@ body {
   position: sticky;
   top: 0;
   background-color: #0b0914; /* هەمان ڕەنگێ باکگراوندا سەرەکی دا ڕوون دیار ببیت */
-  padding-top: 15px;
+  padding-top: 10px;
   z-index: 1000; /* دکەڤیتە سەر هەمی کارتێن دی */
 }
 
