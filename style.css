@@ -586,3 +586,7 @@ body:has(.sarmad-page-container), body:has(.sarmad-details) {
   width: 100% !important;
   box-sizing: border-box;
 }
+
+.sarmad-page-container {
+  padding-top: 20px !important;
+}
