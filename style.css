@@ -540,3 +540,49 @@ body {
   object-fit: cover !important;
   flex-shrink: 0 !important;
 }
+
+/* پڕکرنا تەڤایا پانییا شاشێ بۆ هەمی بۆکسان */
+.app-card, .vip-card {
+  width: 100% !important;      /* دکەتە تەماما پانییا شاشێ */
+  max-width: 100% !important;  /* ڕێگریێ ل کورتکرنا وێ دکەت */
+  box-sizing: border-box;
+}
+
+/* پڕکرنا تەماما شاشێ و ژێبرنا ڤالاھییێن لایان تنێ بۆ پەڕەیا sarmad.html */
+.sarmad-page-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 10px !important; /* کەمکرنا پادینگا لایان دا بۆکس مەزن ببن */
+  box-sizing: border-box;
+}
+
+/* بۆکسێن مۆر ل ڤێ پەڕەی شاشێ ب تەمامی پڕ بکەن */
+.sarmad-details .card {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* درێژاهیا خەتا مۆر و سەدەرا Back تا تەماما شاشێ بن */
+.sticky-header, .header-line, .header-content {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* چارەسەرا دا بڕڕ پشکێن sarmad.html شاشێ ب تەمامی پڕ بکەن ب بێ ڤالاھی */
+body:has(.sarmad-page-container), body:has(.sarmad-details) {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+
+/* کۆنترۆلکرنا پانییا sarmad.html بە لایان کێمەکێ ڤالاھییەکا جوان هەبیت */
+.sarmad-page-container, .sarmad-details {
+  width: 100% !important;        /* شاشێ بڕڕ پڕ ناکەت، بەلکو ۹٢٪ دگرت */
+  max-width: 450px !important;  /* سنورەکێ دانایە دا گەلەک مەزن نەبت ل سەر شاشێن گەورە */
+  margin: 0 auto !important;    /* دکەتە ناڤەڕاست */
+  box-sizing: border-box;
+}
+
+.sarmad-details .card, .sticky-header {
+  width: 100% !important;
+  box-sizing: border-box;
+}
