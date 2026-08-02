@@ -276,9 +276,9 @@ body {
 /* جێگیرکرنا بەشێ سەرێ (Sticky Top Header) */
 .sticky-header {
   position: sticky;
-  top: 0;
+  top: 15;
   background-color: #0b0914; /* هەمان ڕەنگێ باکگراوندا سەرەکی دا ڕوون دیار ببیت */
-  padding-top: 20px;
+  padding-top: 15px;
   z-index: 1000; /* دکەڤیتە سەر هەمی کارتێن دی */
 }
 
@@ -585,8 +585,4 @@ body:has(.sarmad-page-container), body:has(.sarmad-details) {
 .sarmad-details .card, .sticky-header {
   width: 100% !important;
   box-sizing: border-box;
-}
-
-.sarmad-page-container {
-  padding-top: 20px !important;
 }
