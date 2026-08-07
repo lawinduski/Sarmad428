@@ -45,29 +45,29 @@
         <span class="sub-title">SIGNER TOOL</span>
         <p class="verified">Verified</p>
       </div>
+      
       <!-- دوکما GET -->
-       <button class="get-btn" onclick="openModal()">GET</button>
+      <button class="get-btn" onclick="openModal()">GET</button>
 
-<!-- بۆکسێ دیزاینکری ب وێنە (Modal Popup) -->
-<div id="myModal" class="custom-modal">
-  <div class="custom-modal-content">
-    
-    <h3>⏳ !نێزیکە دێ بەردەست بیت</h3>
-    <p>will be soon</p>
-    
-    <button class="modal-ok-btn" onclick="closeModal()">OK</button>
-  </div>
-</div>
-
-<script>
-  function openModal() {
-    document.getElementById("myModal").style.display = "flex";
-  }
-
-  function closeModal() {
-    document.getElementById("myModal").style.display = "none";
-  }
-</script>
+      <!-- بۆکسێ دیزاینکری ب وێنە (Modal Popup) -->
+      <div id="myModal" class="custom-modal">
+        <div class="custom-modal-content">
+          
+          <h3>⏳ !نێزیکە دێ بەردەست بیت</h3>
+          <p>will be soon</p>
+          <button class="modal-ok-btn" onclick="closeModal()">OK</button>
+        </div>
+      </div>
+      
+      <script>
+      function openModal() {
+        document.getElementById("myModal").style.display = "flex";
+      }
+      
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+        }
+      </script>
     </div>
 
     <div class="app-card border-pink">
@@ -81,47 +81,88 @@
        <div class="card">
         <!-- لێرە تەنها دوگمەی GET بەجێبهێڵە -->
          <a href="sarmad.html">
-          <button class="get-btn" onclick="openSarmadPage()">GET</button>
-        </a>
-      </div>
-      <!-- Bottom Navigation -->
-       <div class="bottom-nav">
-        <a href="index.html" class="nav-item active">
-          <span>🏠</span>
-         <span>Home</span>
-        </a>
-        <a href="apps.html" class="nav-item">
-          <span>📱</span>
-          <span>Apps</span>
-        </a>
-        <a href="files.html" class="nav-item">
-          <span>📁</span>
-          <span>Files</span>
-        </a>
-        <a href="settings.html" class="nav-item">
-          <span>⚙️</span>
-          <span>Setting</span>
-        </a>
-      </div>
-    </a>
-  </nav>
+          <button class="get-btn" onclick="openSarmadPage()">VIEW</button>
+         </a>
+       </div>
+       
+       <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+          <a href="index.html" class="nav-item active">
+            <span>🏠</span>
+            <span>Home</span>
+          </a>
+          <a href="apps.html" class="nav-item">
+            <span>📱</span>
+            <span>Apps</span>
+          </a>
+          <a href="files.html" class="nav-item">
+            <span>📁</span>
+            <span>Files</span>
+          </a>
+          <a href="settings.html" class="nav-item">
+            <span>⚙️</span>
+            <span>Setting</span>
+          </a>
+        </div>
+      </a>
+    </nav>
   
-  <script>
-  // دەستنیشانکرنا لاپەڕەیا نها و چالاککرنا دوگما وێ
-  document.addEventListener("DOMContentLoaded", function() {
-    let currentPage = window.location.pathname.split("/").pop();
-    if (currentPage === "") currentPage = "index.html"; // ئەگەر ماڵپەڕ ل سەر هۆستێ سەرەکی بیت
+    <script>
+    // دەستنیشانکرنا لاپەڕەیا نها و چالاککرنا دوگما وێ
+    document.addEventListener("DOMContentLoaded", function() {
+      let currentPage = window.location.pathname.split("/").pop();
+      if (currentPage === "") currentPage = "index.html"; // ئەگەر ماڵپەڕ ل سەر هۆستێ سەرەکی بیت
 
-    let navItems = document.querySelectorAll(".bottom-nav .nav-item");
-    navItems.forEach(item => {
-      let href = item.getAttribute("href");
-      if (href === currentPage) {
-        item.classList.add("active");
+      let navItems = document.querySelectorAll(".bottom-nav .nav-item");
+      navItems.forEach(item => {
+        let href = item.getAttribute("href");
+        if (href === currentPage) {
+          item.classList.add("active");
+        }
+      });
+    });
+    </script>
+
+    <!-- بەشێ پەیاما بخێرهاتنێ (Welcome Popup) -->
+    <div id="welcomePopup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(10px); display: flex; justify-content: center; align-items: center; z-index: 99999; opacity: 0; pointer-events: none; transition: opacity 0.4s ease;">
+      <div style="background: rgba(25, 22, 38, 0.95); border: 1px solid rgba(168, 85, 247, 0.4); border-radius: 25px; padding: 25px; width: 85%; max-width: 330px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.8); transform: scale(0.8); transition: transform 0.4s ease;">
+        
+        <!-- وێنە یان لۆگۆ -->
+         <img src="images/icon1.jpg" alt="Sarmad 428 Logo" style="width: 75px; height: 75px; border-radius: 20px; object-fit: cover; margin-bottom: 15px; border: 2px solid rgba(168, 85, 247, 0.5); box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);">
+         
+         <!-- نڤیسارا بخێرهاتنێ -->
+          <h3 style="color: #ffffff; font-size: 18px; margin: 0 0 8px 0; font-weight: 700;">Sarmad 428 بخێر هاتن بۆ سایتێ </h3>
+          <p style="color: #b3b3c1; font-size: 13px; margin: 0 0 20px 0; line-height: 1.5;">لڤێرە هەمی جۆرێن ئەپلیکەیشنان دی بەدەست هەوە کەفن ب ساناهیترین شێواز!</p>
+          
+          <!-- دوگمەیا داخستنێ --> 
+          <button onclick="closePopup()" style="background: linear-gradient(135deg, #a855f7, #9333ea); color: white; border: none; padding: 10px 0; width: 100%; border-radius: 14px; font-weight: 700; font-size: 14px; cursor: pointer; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);">دەست پێ بکە</button>
+      </div>
+    </div>
+
+    <script>
+    // پشکنین دکەت ئایا د ڤی سێشنێ (Session) یا هاتیە دیتن یان نە
+    window.addEventListener('DOMContentLoaded', () => {
+      if (!sessionStorage.getItem('sarmad_session_welcomed')) {
+        setTimeout(() => {
+          const popup = document.getElementById('welcomePopup');
+          popup.style.opacity = '1';
+          popup.style.pointerEvents = 'auto';
+          popup.querySelector('div').style.transform = 'scale(1)';
+        }, 300);
       }
     });
-  });
-  </script>
-
-</body>
+  
+    // داخستنا پەیامێ
+    function closePopup() {
+      const popup = document.getElementById('welcomePopup');
+      popup.style.opacity = '0';
+      popup.style.pointerEvents = 'none';
+      popup.querySelector('div').style.transform = 'scale(0.8)';
+        
+      // تەنها بۆ ڤی سێشنێ (تا براوزەر هاتیە بستردن) تۆمار دکەت
+      sessionStorage.setItem('sarmad_session_welcomed', 'true');
+    }
+    </script>
+  </body>
 </html>
       

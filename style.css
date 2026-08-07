@@ -667,3 +667,35 @@ body {
   margin: 0 auto !important;
   box-sizing: border-box !important;
 }
+
+/* تنێ گۆڕینا ڕەنگ و دیزاینا مۆدێرن ب بێ دەستکاریکرنا ناڤەرۆک و قەبارەیێن تە یێن ڕەسەن */
+body {
+  background: linear-gradient(135deg, #0a0a0c, #161224) !important;
+  color: #ffffff !important;
+  padding-bottom: 90px !important; /* دا مینیۆیا ژێرێ دەستکارییا نڤیسارێن ژێر نەکت */
+}
+
+/* جوانکرنا شوشەیی (Glassmorphism) بۆ کارتێن تە بێ گۆڕینا قەبارەی */
+.card {
+  background: rgba(35, 30, 52, 0.8) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(168, 85, 247, 0.3) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.3s ease !important;
+}
+
+.card:hover {
+  border-color: rgba(168, 85, 247, 0.8) !important;
+  transform: translateY(-2px);
+}
+
+/* دوگمەیێن GET و BUY یێن مۆدێرن */
+.get-btn, .buy-btn {
+  background: linear-gradient(135deg, #a855f7, #9333ea) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4) !important;
+}
