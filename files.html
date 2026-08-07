@@ -18,13 +18,20 @@
       <input type="text" id="fileSearchInput" onkeyup="searchFiles()" placeholder="Search files & certs...">
     </div>
 
+    <!-- ⬇️ مینیۆیا فلتەرکرنا (All, Apps, Games) ⬇️ -->
+    <div class="filter-menu">
+      <button class="filter-btn active" onclick="filterSelection('all', this)">All</button>
+      <button class="filter-btn" onclick="filterSelection('app-card', this)">Apps</button>
+      <button class="filter-btn" onclick="filterSelection('game-card', this)">Games</button>
+    </div>
+
     <p class="section-title-text">Certificates & Files</p>
 
     <!-- ⬇️ لستایا ٦ بوکسێن فایلان دگەل لوگۆیان ⬇️ -->
     <div class="sarmad-details" id="filesList">
       
       <!-- بوکسا 1 -->
-      <div class="card file-card">
+      <div class="card file-card app-card">
         <div class="card-info">
           <img src="images/cert-logo.png" alt="File Logo" class="card-img">
           <div>
@@ -38,7 +45,7 @@
       </div>
 
       <!-- بوکسا 2 -->
-      <div class="card file-card">
+      <div class="card file-card app-card">
         <div class="card-info">
           <img src="images/esign2-logo.png" alt="File Logo" class="card-img">
           <div>
@@ -52,7 +59,7 @@
       </div>
 
       <!-- بوکسا 3 -->
-      <div class="card file-card">
+      <div class="card file-card app-card">
         <div class="card-info">
           <img src="images/scarlet-logo.png" alt="File Logo" class="card-img">
           <div>
@@ -66,7 +73,7 @@
       </div>
 
       <!-- بوکسا 4 -->
-      <div class="card file-card">
+      <div class="card file-card app-card">
         <div class="card-info">
           <img src="images/dns-logo.png" alt="File Logo" class="card-img">
           <div>
@@ -80,7 +87,7 @@
       </div>
 
       <!-- بوکسا 5 -->
-      <div class="card file-card">
+      <div class="card file-card app-card">
         <div class="card-info">
           <img src="images/gbox-logo.png" alt="File Logo" class="card-img">
           <div>
@@ -94,7 +101,7 @@
       </div>
 
       <!-- بوکسا 6 -->
-      <div class="card file-card">
+      <div class="card file-card game-card">
         <div class="card-info">
           <img src="images/troll-logo.png" alt="File Logo" class="card-img">
           <div>
@@ -107,7 +114,163 @@
         </a>
       </div>
 
-      <div class="card file-card">
+      <div class="card file-card app-card">
+        <div class="card-info">
+          <img src="images/capcut.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">CapCut</h3>
+            <p class="card-subtitle">100.0 MB</p>
+          </div>
+        </div>
+        <a href="" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <div class="card file-card game-card">
+        <div class="card-info">
+          <img src="images/carp.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">Car Parking</h3>
+            <p class="card-subtitle">100.0 MB</p>
+          </div>
+        </div>
+        <a href="" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <div class="card file-card game-card">
+        <div class="card-info">
+          <img src="images/amongus.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">Among us</h3>
+            <p class="card-subtitle">100.0 MB</p>
+          </div>
+        </div>
+        <a href="" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <div class="card file-card app-card">
+        <div class="card-info">
+          <img src="images/alightmotion.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">Alight Motion</h3>
+            <p class="card-subtitle">100.0 MB</p>
+          </div>
+        </div>
+        <a href="" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <div class="card file-card game-card">
+        <div class="card-info">
+          <img src="images/minicraft.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">Minicraft</h3>
+            <p class="card-subtitle">100.0 MB</p>
+          </div>
+        </div>
+        <a href="" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <div class="card file-card app-card">
+        <div class="card-info">
+          <img src="images/ovf-editor.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">OVF editor</h3>
+            <p class="card-subtitle">100.0 MB</p>
+          </div>
+        </div>
+        <a href="" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <div class="card file-card app-card">
+        <div class="card-info">
+          <img src="images/mojo.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">Mojo</h3>
+            <p class="card-subtitle">100.0 MB</p>
+          </div>
+        </div>
+        <a href="" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <div class="card file-card app-card">
+        <div class="card-info">
+          <img src="images/djay.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">Djay Pro</h3>
+            <p class="card-subtitle">100.0 MB</p>
+          </div>
+        </div>
+        <a href="" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <div class="card file-card app-card">
+        <div class="card-info">
+          <img src="images/netflix.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">Netflix</h3>
+            <p class="card-subtitle">100.0 MB</p>
+          </div>
+        </div>
+        <a href="" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <div class="card file-card app-card">
+        <div class="card-info">
+          <img src="images/lightroom.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">Light room</h3>
+            <p class="card-subtitle">100.0 MB</p>
+          </div>
+        </div>
+        <a href="" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <div class="card file-card game-card">
+        <div class="card-info">
+          <img src="images/roblox.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">Rblox</h3>
+            <p class="card-subtitle">100.0 MB</p>
+          </div>
+        </div>
+        <a href="" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <div class="card file-card app-card">
+        <div class="card-info">
+          <img src="images/remini.png" alt="File Logo" class="card-img">
+          <div>
+            <h3 class="file-name">Remini</h3>
+            <p class="card-subtitle">100.0 MB</p>
+          </div>
+        </div>
+        <a href="" target="_blank">
+          <button class="get-btn">GET</button>
+        </a>
+      </div>
+
+      <div class="card file-card app-card">
         <div class="card-info">
             <img src="images/GTA-logo.png" alt="Logo" class="card_img">
             <div>
@@ -144,21 +307,63 @@
     </a>
   </div>
 
-  <!-- ⬇️ سکریپتا سێرچکرنێ (JavaScript) ⬇️ -->
   <script>
-    function searchFiles() {
-      let input = document.getElementById('fileSearchInput').value.toLowerCase();
-      let cards = document.getElementsByClassName('file-card');
+  function filterSelection(category) {
+    let cards = document.getElementsByClassName('file-card');
+    let buttons = document.getElementsByClassName('filter-btn');
 
-      for (let i = 0; i < cards.length; i++) {
-        let fileName = cards[i].querySelector('.file-name').innerText.toLowerCase();
-        if (fileName.includes(input)) {
-          cards[i].style.display = "flex";
+    // لادانا چالاکیا ژ هەمی دوگمەکان
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].classList.remove('active');
+    }
+    
+    // چالاککرنا ئەو دوگمی یا هاتیە کلیککرن
+    event.target.classList.add('active');
+
+    // نیشدان یان ڤەشارتنا کارتخان
+    for (let i = 0; i < cards.length; i++) {
+      let card = cards[i];
+      if (category === 'all') {
+        card.style.display = "flex";
+      } else {
+        if (card.classList.contains(category)) {
+          card.style.display = "flex";
         } else {
-          cards[i].style.display = "none";
+          card.style.display = "none";
         }
       }
     }
+  }
+
+  function searchFiles() {
+    let input = document.getElementById('fileSearchInput').value.toLowerCase();
+    let cards = document.getElementsByClassName('file-card');
+
+    for (let i = 0; i < cards.length; i++) {
+      let fileName = cards[i].querySelector('.file-name').innerText.toLowerCase();
+      if (fileName.includes(input)) {
+        cards[i].style.display = "flex";
+      } else {
+        cards[i].style.display = "none";
+      }
+    }
+  }
+  </script>
+  
+  <script>
+  // دەستنیشانکرنا لاپەڕەیا نها و چالاککرنا دوگما وێ
+  document.addEventListener("DOMContentLoaded", function() {
+    let currentPage = window.location.pathname.split("/").pop();
+    if (currentPage === "") currentPage = "index.html"; // ئەگەر ماڵپەڕ ل سەر هۆستێ سەرەکی بیت
+
+    let navItems = document.querySelectorAll(".bottom-nav .nav-item");
+    navItems.forEach(item => {
+      let href = item.getAttribute("href");
+      if (href === currentPage) {
+        item.classList.add("active");
+      }
+    });
+  });
   </script>
 
 </body>

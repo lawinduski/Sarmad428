@@ -86,25 +86,42 @@
       </div>
       <!-- Bottom Navigation -->
        <div class="bottom-nav">
-  <a href="index.html" class="nav-item active">
-    <span>🏠</span>
-    <span>Home</span>
-  </a>
-  <a href="apps.html" class="nav-item">
-    <span>📱</span>
-    <span>Apps</span>
-  </a>
-  <a href="files.html" class="nav-item">
-    <span>📁</span>
-    <span>Files</span>
-  </a>
-  <a href="settings.html" class="nav-item">
-    <span>⚙️</span>
-    <span>Setting</span>
-  </a>
-</div>
-      </a>
-    </nav>
-  </body>
-  </html>
+        <a href="index.html" class="nav-item active">
+          <span>🏠</span>
+         <span>Home</span>
+        </a>
+        <a href="apps.html" class="nav-item">
+          <span>📱</span>
+          <span>Apps</span>
+        </a>
+        <a href="files.html" class="nav-item">
+          <span>📁</span>
+          <span>Files</span>
+        </a>
+        <a href="settings.html" class="nav-item">
+          <span>⚙️</span>
+          <span>Setting</span>
+        </a>
+      </div>
+    </a>
+  </nav>
+  
+  <script>
+  // دەستنیشانکرنا لاپەڕەیا نها و چالاککرنا دوگما وێ
+  document.addEventListener("DOMContentLoaded", function() {
+    let currentPage = window.location.pathname.split("/").pop();
+    if (currentPage === "") currentPage = "index.html"; // ئەگەر ماڵپەڕ ل سەر هۆستێ سەرەکی بیت
+
+    let navItems = document.querySelectorAll(".bottom-nav .nav-item");
+    navItems.forEach(item => {
+      let href = item.getAttribute("href");
+      if (href === currentPage) {
+        item.classList.add("active");
+      }
+    });
+  });
+  </script>
+
+</body>
+</html>
       
